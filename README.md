@@ -122,5 +122,5 @@ Used multiple approaches:
 ## ✅ Conclusion
 This project applies a structured time series analysis approach to household electricity consumption data. 
 Datetime feature extraction and exploratory analysis enabled the identification of trend and seasonality patterns. 
-A seasonal ARIMA model was used for forecasting, and its performance evaluated using standard forecasting error metrics.
+A seasonal ARIMA model was used for forecasting, and its performance was evaluated using standard forecasting error metrics.
 
