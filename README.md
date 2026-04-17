@@ -1,7 +1,7 @@
 # Household Power Consumption Time Series Analysis
 
 ## 📌 Project Overview
-Forecasting daily electricity consumption to support demand planning and energy optimization. This project performs end-to-end time series analysis on the **Household Electric Power Consumption** dataset from the UCI Machine Learning Repository. The objective is to analyze electricity usage patterns over time, extract meaningful datetime features, identify trend and seasonality, and forecast future consumption using ARIMA-based models.
+Developed a forecasting model capturing trend and seasonality patterns to generate accurate short-term electricity consumption predictions. This project performs end-to-end time series analysis on the **Household Electric Power Consumption** dataset from the UCI Machine Learning Repository. The objective is to analyze electricity usage patterns over time, extract meaningful datetime features, identify trend and seasonality, and forecast future consumption using ARIMA-based models.
 
 ---
 
