@@ -1,126 +1,103 @@
-# Household Power Consumption Time Series Analysis
+# ⚡ Time Series Forecasting of Electricity Consumption
+
+## 📊 Forecast Visualization
+
+![Forecast vs Actual](time_series_forecast_vs_actual.png)
+
+---
 
 ## 📌 Project Overview
-Developed a forecasting model capturing trend and seasonality patterns to generate accurate short-term electricity consumption predictions. This project performs end-to-end time series analysis on the **Household Electric Power Consumption** dataset from the UCI Machine Learning Repository. The objective is to analyze electricity usage patterns over time, extract meaningful datetime features, identify trend and seasonality, and forecast future consumption using ARIMA-based models.
+
+Developed a time series forecasting model capturing trend and seasonality patterns to generate accurate short-term electricity consumption predictions using ARIMA/SARIMAX models on a large-scale dataset (~2M records).
+
+---
+
+## 🎯 Business Impact
+
+Enables data-driven energy consumption planning by identifying usage patterns and generating reliable short-term forecasts.
 
 ---
 
 ## 📂 Dataset
+
 - **Source:** UCI Machine Learning Repository  
 - **Granularity:** Minute-level household electricity consumption  
 - **Size:** ~2 million records  
 
-## 📥 Dataset Access
-The dataset is not included in this repository due to size limitations.
-It can be downloaded directly from the UCI Machine Learning Repository:
-Household Electric Power Consumption dataset.
-
-### Key Variables:
-- Global Active Power  
-- Global Reactive Power  
-- Voltage  
-- Global Intensity  
-- Sub-metering values  
+> Dataset not included due to size. Can be downloaded from UCI repository.
 
 ---
 
 ## ⚙️ Workflow Summary
 
-### 1️⃣ Data Loading & Cleaning
+### 1️⃣ Data Preprocessing
 - Handled missing values  
 - Converted numeric columns  
-- Combined `Date` and `Time` into a single `Datetime` column  
-- Set `Datetime` as index with minute-level frequency  
+- Combined `Date` and `Time` into `Datetime`  
+- Set time index for analysis  
 
 ---
 
-### 2️⃣ Datetime Feature Extraction
-Extracted multiple temporal features to understand usage behavior:
-- Year  
-- Month  
-- Day  
-- Day of week  
-- Hour  
-- Week of year  
-- Quarter  
+### 2️⃣ Feature Engineering
+- Extracted: Year, Month, Day, Hour, Week, Quarter  
+- Created time-based insights  
 
 ---
 
-### 3️⃣ Exploratory Data Analysis (EDA)
-- Minute-level power consumption visualization  
-- Daily average consumption trends  
-- Rolling mean and rolling standard deviation  
-- Correlation analysis among numerical features  
-
----
-
-### 4️⃣ Trend & Seasonality Analysis
-Used multiple approaches:
+### 3️⃣ Trend & Seasonality Analysis
 - Rolling statistics  
-- Seasonal decomposition (additive model)  
-- Visual inspection of trend and seasonal components  
+- Seasonal decomposition  
+- Pattern identification  
 
 ---
 
-### 5️⃣ Stationarity Check
+### 4️⃣ Stationarity Check
 - Augmented Dickey-Fuller (ADF) test  
-- Differencing applied where necessary  
+- Applied differencing where required  
 
 ---
 
-### 6️⃣ Time Series Forecasting
-- Daily resampled data used for modeling  
-- Auto ARIMA used to identify optimal parameters  
-- Generated short-term and extended forecasts  
-- Visualized forecasts with confidence intervals  
+### 5️⃣ Forecasting Model
+- ARIMA / SARIMAX modeling  
+- Auto ARIMA for parameter tuning  
+- Forecast generation with confidence intervals  
 
 ---
 
-### 7️⃣ Model Evaluation
+### 6️⃣ Model Evaluation
 - Compared actual vs predicted values  
-- Evaluated performance using MAE and RMSE  
-- Residual analysis to assess model assumptions  
+- Metrics: MAE, RMSE  
+- Residual analysis  
 
 ---
 
-## 📊 Visualizations Included
-- Minute-level consumption plot  
-- Daily average power usage  
-- Rolling statistics visualization  
-- Seasonal decomposition plots  
-- Forecast vs actual with confidence intervals  
-- Residual diagnostics  
+## 📊 Key Insights
+
+- Strong seasonal patterns observed in electricity consumption  
+- Trend variations captured effectively after resampling  
+- Forecast closely follows actual values in short-term horizon  
 
 ---
 
 ## 🛠️ Technologies Used
+
 - Python  
-- Pandas & NumPy  
-- Matplotlib & Seaborn  
-- Statsmodels  
-- pmdarima  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- Statsmodels, pmdarima  
 - Scikit-learn  
 - Jupyter Notebook  
 
 ---
 
-## 📈 Key Learnings
-- Importance of datetime feature engineering in time series analysis  
-- Multiple techniques are required to understand trend and seasonality  
-- ARIMA models are effective for short-term forecasting on aggregated data  
-- Forecast uncertainty increases with longer prediction horizons  
-
----
-
 ## 🚀 Future Improvements
-- Incorporate external factors such as weather data  
-- Use rolling cross-validation for model robustness  
-- Experiment with SARIMA and Prophet models  
+
+- Integrate external features (weather, holidays)  
+- Apply advanced models (SARIMA, Prophet)  
+- Improve long-term forecasting accuracy  
 
 ---
 
-## ✅ Conclusion
-This project applies a structured time series analysis approach to household electricity consumption data. 
-Datetime feature extraction and exploratory analysis enabled the identification of trend and seasonality patterns. 
-A seasonal ARIMA model was used for forecasting, and its performance was evaluated using standard forecasting error metrics.
+## 📬 Contact
 
+Feel free to connect for feedback or collaboration!
